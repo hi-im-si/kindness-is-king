@@ -1,9 +1,9 @@
 {
-  "name": "ecommerce-gatsby-tutorial",
+  "name": "kindness-is-king",
   "private": true,
-  "description": "Accept payments in your Gatsby site using Stripe Checkout.",
+  "description": "Kindness is King - Raising money for the NHS Charities Together.",
   "version": "0.1.0",
-  "author": "@thorwebdev",
+  "author": "@Hi_Im_Si",
   "dependencies": {
     "@stripe/stripe-js": "^1.0.1",
     "gatsby": "^2.20.9",
@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thorsten-stripe/ecommerce-gatsby-tutorial"
+    "url": "https://github.com/hi-im-si/kindness-is-king"
   },
   "bugs": {
-    "url": "https://github.com/thorsten-stripe/ecommerce-gatsby-tutorial/issues"
+    "url": "https://github.com/hi-im-si/kindness-is-king/issues"
   }
 }

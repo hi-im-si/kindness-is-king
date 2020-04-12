@@ -4,16 +4,16 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby E-Commerce Starter`,
-    description: `Accept payments in your Gatsby site using Stripe Checkout.`,
-    author: `@thorwebdev`,
+    title: `Kindness is King`,
+    description: `Raising money for the NHS Charities Together during the COVID-19 Pandemic.`,
+    author: `@Hi_Im_Si`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-stripe`,
       options: {
-        objects: ['Sku'],
+        objects: ['Sku', 'Product'],
         secretKey: process.env.STRIPE_SECRET_KEY,
         downloadFiles: false,
       },
@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/kikico.png`, // This path is relative to the root of the site.
       },
     },
     {

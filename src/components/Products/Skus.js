@@ -9,7 +9,7 @@ const Skus = () => {
   return (
     <StaticQuery
       query={graphql`
-        query SkusForProduct {
+        {
           skus: allStripeSku(sort: { fields: [price] }) {
             edges {
               node {
@@ -18,11 +18,6 @@ const Skus = () => {
                 price
                 attributes {
                   name
-                }
-                product {
-                  metadata {
-                    description
-                  }
                 }
               }
             }
