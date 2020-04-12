@@ -36,13 +36,18 @@ const Footer = () => (
               filename="pinched-post-brand.png"
             />
           </a>
-          <a href="mailto:si@hi-im-si.com" className="c-img-grid__item">
+          <button
+            onClick={() => {
+              window.location.href = 'mailto:si@hi-im-si.com'
+            }}
+            className="c-img-grid__item"
+          >
             <Image
               className="c-img-grid__media  c-img-grid__media--med"
               alt="Hi I'm Si"
               filename="hi-im-si-brand.png"
             />
-          </a>
+          </button>
         </div>
       </section>
     </div>
