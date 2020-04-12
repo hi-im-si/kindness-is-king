@@ -8,7 +8,17 @@ import ContentMedia from '../components/contentmedia'
 
 const IndexPage = props => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[
+        `kindness is king`,
+        `NHS`,
+        `COVID-19`,
+        `charity`,
+        `letterpress`,
+        `pinched post`,
+      ]}
+    />
     <Hero />
     <Content
       sectionId="cause"
