@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../components/Image'
+import Image from './Image'
 
 const Footer = () => (
   <footer className="c-footer" data-bg-color="secondary" id="sponsors">

@@ -10,7 +10,7 @@ const Skus = () => {
     <StaticQuery
       query={graphql`
         {
-          skus: allStripeSku(sort: { fields: [price] }) {
+          skus: allStripeSku {
             edges {
               node {
                 id

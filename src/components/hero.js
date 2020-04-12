@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Skus from '../components/Products/Skus'
+import Skus from './Products/Skus'
 
 export const fluidImage = graphql`
   fragment fluidImage on File {
