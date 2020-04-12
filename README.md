@@ -8,6 +8,8 @@
   Kindness is King
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/12756308-8621-4784-9b4f-90e45a4fc772/deploy-status)](https://app.netlify.com/sites/vibrant-edison-b4c94e/deploys)
+
 Kindness is King is a site dedicated to the hardworking NHS staff during the COVID-19 Pandemic. All proceeds generated through the site via the sale of the Kindness is King print will be donated to [NHS Charities Together](https://uk.virginmoneygiving.com/charity-web/charity/displayCharityCampaignPage.action?charityCampaignUrl=NHSCharitiesCOVID19)
 
 ## Setup
