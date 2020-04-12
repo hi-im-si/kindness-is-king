@@ -1,0 +1,52 @@
+///*----------------------------------*\
+//  #HEADER
+//\*----------------------------------*/
+//
+//  Default Template Header.
+//  2 Header Options available:
+//
+//      HEADER OPTION 1
+//      | CTA | NAV | LOGO | NAV | CTA |
+//
+//      HEADER OPTION 2
+//      | LOGO | | NAV | | CTA | CTA |
+//
+//      Usage:
+//      <header class="c-header  c-header--sticky  js-header" role="banner"> ... </div>
+//      - `c-header--sticky` provides fixed header styling
+//      - `js-header` provides JS hooks for header functionality
+//
+//\*----------------------------------*/
+//
+
+$header-mq: $mq-tab;
+$header-bg: $colour-primary;
+
+.c-header {
+
+    @include _position(fixed, 0, 0, null, 0);
+    @include z-index(header);
+    width: 100%;
+    padding: $global-spacing 0;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: 0.5s $ease-in-out transform, 0.5s $ease-in-out background-color, 0.5s $ease-in-out padding-top;
+
+    &__container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        width: 100%;
+        padding: 0 $global-spacing / 2;
+    }
+
+    &__nav {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+
+        @include mq($header-mq, min) {
+            justify-content: flex-end;
+        }
+    }
+}

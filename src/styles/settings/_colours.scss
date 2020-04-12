@@ -1,0 +1,36 @@
+///*----------------------------------*\
+//  #COLOUR SETTINGS
+//\*----------------------------------*/
+//
+// Set up a colour palette which allows us to theme the entire project from one location
+//
+//\*----------------------------------*/
+
+//--- Core Colours
+$colour-navy: #021F46;
+$colour-pink: #ffccff;
+$colour-turquoise: #18e0cf;
+$colour-white: #fff;
+
+
+//--- Hierarchical Colours
+$colour-primary: $colour-navy;
+$colour-secondary: $colour-pink;
+$colour-tertiary: $colour-turquoise;
+$colour-quaternary: $colour-white;
+
+
+// GLOBAL Colour Map - see: utilities/util
+$colours: (
+    primary: $colour-primary,
+    secondary: $colour-secondary,
+    tertiary: $colour-tertiary,
+    quaternary: $colour-quaternary
+);
+
+
+//--- States
+$colour-error: #b42c2c;
+$colour-success: #090;
+$colour-notice: #ec921f;
+$colour-disabled: #dcdddf;

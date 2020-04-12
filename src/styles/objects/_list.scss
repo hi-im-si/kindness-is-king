@@ -1,0 +1,36 @@
+/*========================================================================================
+============================ Generic Lists ===============================================
+==========================================================================================*/
+
+.o-list {
+    width: 100%;
+    margin: 0 0 $global-spacing-s;
+    padding: 0;
+
+    // stylelint-disable-next-line
+    li {
+        position: relative;
+        display: list-item;
+    }
+
+    &__item {
+        margin-bottom: $global-spacing-s * 2;
+    }
+
+    &--square {
+        list-style: square outside;
+    }
+    &--circle {
+        list-style: circle outside;
+    }
+    &--disc {
+        list-style: disc outside;
+    }
+    &--counter {
+        list-style: decimal outside;
+    }
+    &--reset {
+        list-style: none outside none;
+    }
+
+}

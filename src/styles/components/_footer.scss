@@ -1,0 +1,30 @@
+///*----------------------------------*\
+//  #FOOTER
+//\*----------------------------------*/
+//
+//  Default Template Footer.
+//  These styles are purely provided as a base and may need to be redeveloped to fit UI of design
+//
+//\*----------------------------------*/
+//
+
+$footer-mq: $mq-tab;
+$footer-mq-s: $mq-mob--med;
+
+.c-footer {
+    padding: $global-spacing-m 0 $global-spacing-l;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include mq($footer-mq, min) {
+            justify-content: flex-start;
+        }
+
+        &--pushed {
+            margin-bottom: $global-spacing;
+        }
+    }
+}

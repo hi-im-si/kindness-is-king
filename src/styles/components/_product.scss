@@ -1,0 +1,38 @@
+.c-product {
+
+    display: flex;
+    flex-direction: column;
+    padding: 0 $global-spacing-s;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+
+        @include mq($mq-tab, min) {
+            flex-direction: row;
+        }
+    }
+
+    &__price {
+
+    }
+
+    &__description {
+
+        margin-bottom: $global-spacing;
+
+        @include mq($mq-tab, min) {
+            margin-bottom: 0;
+            padding-right: $global-spacing-xl / 3;
+        }
+    }
+
+    &__btn {
+
+        align-self: center;
+
+        @include mq($mq-tab, min) {
+            align-self: flex-end;
+        }
+    }
+}

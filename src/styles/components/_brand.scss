@@ -1,0 +1,30 @@
+///*----------------------------------*\
+//  #BRAND/LOGO
+//\*----------------------------------*/
+//
+//  Core styles for global brand/logo
+//
+//\*----------------------------------*/
+//
+//  Usage:
+//
+// <a class="" href="" title="">
+//     <svg class="c-brand"><use xlink:href="#logo"></use></svg>
+// </a>
+//
+// SVG to be referenced from /assets/img/icon.svg using the <use xlink> method.
+
+.c-brand {
+    display: flex;
+    width: $brand-scale / 2;
+    @include z-index(brand);
+
+    @include mq($mq-desk--lrg, min) {
+        width: $brand-scale;
+    }
+
+    &--sml {
+        width: $brand-scale-sml;
+        height: $brand-scale-sml / 3;
+    }
+}

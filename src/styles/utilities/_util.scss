@@ -1,0 +1,160 @@
+///*----------------------------------*\
+//  #UTILITIES
+//\*----------------------------------*/
+//
+//  A collection of utilities that allow for quickly applying small styling tweaks to components.
+//  NOTE: Use Sparingly.
+//
+//\*----------------------------------*/
+//
+// Usage:
+// <div class="u-mt-10"></div>
+
+///*----------------------------------*\
+//  #UTILITIES
+//\*----------------------------------*/
+//
+//  A collection of utilities that allow for quickly applying small styling tweaks to components.
+//  NOTE: Use Sparingly.
+//
+//\*----------------------------------*/
+//
+// Usage:
+// <div class="u-mt-10"></div>
+
+$property-map: (
+    margin-top: "mt",
+    margin-right: "mr",
+    margin-bottom: "mb",
+    margin-left: "ml",
+    padding-top: "pt",
+    padding-right: "pr",
+    padding-bottom: "pb",
+    padding-left: "pl"
+);
+
+$prop-config: deep-map-merge(
+    (
+        margin-top: (
+            0
+        ),
+        margin-bottom: (
+            0,
+            10,
+            20,
+            30
+        ),
+        margin-right: (
+            auto
+        ),
+        margin-left: (
+            auto
+        ),
+        padding-right: (
+            0,
+            10,
+            20
+        ),
+        padding-left: (
+            0,
+            10,
+            20
+        ),
+        padding-bottom: (
+            0,
+            10,
+            20
+        )
+    ),
+    $prop-config,
+    true
+);
+
+@each $property, $values in $prop-config {
+    $shorthand: map-get($property-map, $property);
+
+    @each $num in $values {
+        .u-#{$shorthand}-#{$num} {
+            @if is-number($num) {
+                #{$property}: #{$num}px;
+            } @else {
+                #{$property}: #{$num};
+            }
+        }
+    }
+}
+
+// stylelint-disable-next-line
+.sr-only:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+}
+
+
+// see: settings/colours
+@each $class, $text-colour in $colours {
+    [data-t-color="#{$class}"],
+    .u-color-#{$class} {
+        color: #{$text-colour};
+    }
+}
+
+// Backgrounds
+@each $class, $bg-color in $colours {
+    [data-bg-color="#{$class}"] {
+        background-color: #{$bg-color};
+    }
+}
+
+
+// Usage:
+// <div class="u-text-strong"></div>
+.u-text {
+
+    &-bolder { font-weight: $weight-bolder; }
+    &-bold { font-weight: $weight-bold; }
+    &-light { font-weight: $weight-light; }
+    &-italic { font-style: italic; }
+
+    &-upper { text-transform: uppercase; }
+    &-lower { text-transform: lowercase; }
+    &-reset {
+        text-decoration: none;
+        text-transform: none;
+    }
+
+    &-left { text-align:left; }
+    &-right { text-align: right; }
+    &-center { text-align: center; }
+
+    &-baseline {
+        display: block;
+        line-height: 1;
+    }
+
+    &-link {
+        position: relative;
+        &::after {
+            content: "";
+            @include _position(absolute, null, null, 0, 0);
+            display: block;
+            width: 100%;
+            height: 1px;
+            margin-top: $global-spacing-s;
+            background-color: currentColor;
+        }
+    }
+
+}
+
+.u-border {
+    &-top { border-top: 2px solid currentColor; }
+    &-right { border-right: 2px solid currentColor; }
+    &-bottom { border-bottom: 2px solid currentColor; }
+    &-left { border-left: 2px solid currentColor; }
+}

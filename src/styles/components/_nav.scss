@@ -1,0 +1,83 @@
+///*----------------------------------*\
+//  #NAVIGATION
+//\*----------------------------------*/
+//
+//  Default Navigation. Complies with A11y Markup Structure
+//
+//\*----------------------------------*/
+//
+// <nav class="c-nav  js-nav" role="navigation" aria-label="Main Navigation">
+//     <button class="c-nav__btn  js-nav-toggle" aria-expanded="false" aria-controls="navigation" aria-label="Navigation"><span>☰</span></button>
+//     <ul id="navigation" class="c-nav__list  js-nav-list" role="menubar" hidden>
+//         <li class="c-nav__item  c-nav__item--active" role="menuitem">
+//             <a href="/" class="c-nav__link"><span>Nav Item 1</span></a>
+//         </li>
+//         <li class="c-nav__item" role="menuitem">
+//             <a href="/" class="c-nav__link"><span>Nav Item 2</span></a>
+//         </li>
+//         <li class="c-nav__item" role="menuitem">
+//             <a href="/" class="c-nav__link"><span>Nav Item 3</span></a>
+//         </li>
+//     </ul>
+// </nav>
+
+$nav-mq: $mq-tab;
+$nav-item-spacing: $global-spacing-s;
+
+.c-nav {
+
+    $self: &;
+
+    @include mq($nav-mq, min) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        @include z-index(navigation);
+        width: 100%;
+        font-family: $font-primary;
+        font-weight: $weight-bolder;
+        @include font-size($size-milli);
+        text-transform: uppercase;
+
+        @include mq($nav-mq, min) {
+            @include font-size($size-zeta);
+        }
+    }
+
+    &__item {
+        margin: 0;
+        padding: 0 $nav-item-spacing;
+        text-transform: uppercase;
+        transition: 0.5s $ease-in-out all;
+
+        @include mq($nav-mq, min) {
+            padding: 0 $nav-item-spacing;
+        }
+
+    }
+
+    &__link {
+
+        text-shadow: 2px 1px 1px rgba($colour-quaternary, 0.3);
+
+        @include mq($nav-mq, min) {
+            position: relative;
+            padding-bottom: $global-spacing / 2;
+        }
+
+        &:target {
+            text-decoration: underline;
+        }
+
+    }
+}
+

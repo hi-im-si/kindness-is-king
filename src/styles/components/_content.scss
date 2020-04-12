@@ -1,0 +1,186 @@
+///*----------------------------------*\
+//  #CONTENT
+//\*----------------------------------*/
+//
+//  The main content area of the site
+//
+//\*----------------------------------*/
+//
+//  Usage:
+//
+// <div class="c-content">
+//     <section class="c-content__body">
+//         <header class="c-content__head">
+//             <h2 class="c-content__ttl">...</h2>
+//             <h3 class="c-content__subttl">...</h3>
+//         </header>
+//         <article class="c-content__copy">
+//             <p>...</p>
+//         </article>
+//     </section>
+// </div>
+
+.c-content {
+    position: relative;
+    width: 100%;
+    padding: ($global-spacing-l / 2) $global-spacing / 2;
+
+    @include mq($mq-tab, min) {
+        padding: ($global-spacing-l) $global-spacing;
+    }
+
+    // stylelint-disable-next-line
+    * {
+        pointer-events: auto;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: auto;
+
+        // Alignments
+        &--left {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        &--center,
+        &--centre {
+            align-items: center;
+            text-align: center;
+        }
+
+        &--right {
+            align-items: flex-end;
+            text-align: right;
+        }
+
+        &--island {
+            padding: $global-spacing;
+            background-color: rgba($colour-tertiary, 0.4);
+            text-align: left;
+
+            /*===================*/
+            @include mq($mq-desk, min) {
+                max-width: 560px;
+                padding: ($global-spacing * 2) ($global-spacing * 3);
+
+                &[class*="--right"] {
+                    margin-right: 0;
+                    margin-left: auto;
+                }
+                &[class*="--left"] {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+            }
+            /*===================*/
+        }
+
+        &--bg {
+            background-color: rgba($colour-tertiary, 0.4);
+        }
+
+        // stylelint-disable-next-line
+        > * {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    // MODIFIERS
+    &--banner {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        pointer-events: none;
+        @include _position(absolute, 0, 0, null, 0);
+
+        .c-content__inner {
+            @include _position(absolute, null, 0, null, 0);
+            justify-content: center;
+            max-width: #{$container-size-sml}px;
+            padding: $global-spacing-s * 2;
+            pointer-events: none;
+
+            @include mq($mq-mob--lrg, min) {
+                padding: $global-spacing-m;
+            }
+        }
+    }
+
+    &--border {
+        border: 1px solid $colour-primary;
+    }
+
+    &--spaced {
+        padding: ($global-spacing-l) ($global-spacing);
+    }
+
+    &--padded {
+        padding: $global-spacing $global-spacing-s;
+
+        .c-content__inner {
+            max-width: 100%;
+        }
+    }
+
+    &--reset {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    // ELEMENTS
+    &__img {
+        @include _position(absolute, 0, 0, 0, 0, -1);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__body {
+        //
+    }
+
+    &__head {
+        width: 100%;
+        margin-bottom: $global-spacing-s;
+    }
+
+    &__copy {
+        max-width: 100%;
+        margin: $global-spacing-s 0;
+    }
+
+    &__flourish {
+        display: flex;
+        margin-top: $global-spacing;
+
+        [class*="--island"] & {
+            align-self: flex-start;
+        }
+    }
+
+    &__cta-group {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-top: 0;
+
+        &--pushed {
+            margin: $global-spacing 0;
+        }
+    }
+
+    &__cta {
+        margin: $global-spacing-s 0 0;
+
+        & + & {
+            @include mq($mq-mob--lrg, min) {
+                margin-left: $global-spacing-s;
+            }
+        }
+    }
+}

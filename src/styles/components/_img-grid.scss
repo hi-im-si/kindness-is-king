@@ -1,0 +1,47 @@
+///*----------------------------------*\
+//  #IMAGE GRID
+//\*----------------------------------*/
+//
+//  Controls display of images in a grid format. ref: Instagram Feed
+//  Should be used in conjunction with objects/flex-media and objects/img for control on aspect ratio and display
+//
+//\*----------------------------------*/
+//
+//  Usage:
+//
+// <div class="c-img-grid">
+//     <div class="c-img-grid__item">
+//         <img class="c-img-grid__media" src="..." alt="..."/>
+//     </div>
+// </div>
+
+$img-gutter: $global-spacing-s;
+
+.c-img-grid {
+    display: grid;
+    flex-flow: row wrap;
+    margin-top: $global-spacing;
+
+    @include mq($mq-tab, min) {
+        grid-auto-columns: auto;
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    &__item {
+
+        padding: (($global-spacing-s * 2) * 2) 0;
+
+        @include mq($mq-tab, min) {
+            padding: 0;
+        }
+
+    }
+
+    &__media {
+        margin: auto;
+        &--sml { max-width: 150px; }
+        &--med { max-width: 185px; }
+        &--lrg { max-width: 260px; }
+    }
+}

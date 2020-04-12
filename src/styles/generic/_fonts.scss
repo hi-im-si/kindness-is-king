@@ -1,0 +1,43 @@
+/*
+ *	WebFont Package Licensed to Pinched Post Ltd
+ */
+
+/* Wulkan Display Light */
+@font-face {
+	font-family: "Wulkan Display";
+	src:	url('../../fonts/Wulkan Display Light.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../../fonts/Wulkan Display Light.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Wulkan Display Light Italic */
+@font-face {
+	font-family: "Wulkan Display";
+	src:	url('../../fonts/Wulkan Display Light Italic.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../../fonts/Wulkan Display Light Italic.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+/* Wulkan Display Medium */
+@font-face {
+	font-family: "Wulkan Display";
+	src:	url('../../fonts/Wulkan Display Medium.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../../fonts/Wulkan Display Medium.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Wulkan Display Bold */
+@font-face {
+	font-family: "Wulkan Display";
+	src:	url('../../fonts/Wulkan Display Bold.woff2') format('woff2'), /* Super Modern Browsers */
+			url('../../fonts/Wulkan Display Bold.woff') format('woff'); /* Pretty Modern Browsers */
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}

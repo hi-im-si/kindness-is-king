@@ -1,0 +1,68 @@
+///*----------------------------------*\
+//  #MEDIA OBJECT
+//\*----------------------------------*/
+//
+//  The most common OOCSS pattern that allows for the display of an image and text side by side without wrapping
+//  REF: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+//
+//\*----------------------------------*/
+//
+// Usage:
+//
+// <div class="o-media  o-media--reverse">
+//
+//     <div class="o-media__elem  o-media__img"> ... </div>
+//
+//     <div class="o-media__elem  o-media__body"> ... </div>
+//
+// </div>
+
+.o-media {
+    $self: &;
+
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    &--reverse {
+        flex-direction: row-reverse;
+    }
+
+    // Generic Class which is bound to both `__img` and `__body`
+    &__elem {
+        display: flex;
+        align-items: center;
+    }
+
+    // Define your Image Element
+    &__img {
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        text-align: center;
+
+        @include mq($mq-desk, min) {
+            max-width: 490px;
+        }
+
+        .o-media--reverse & {
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+
+    // Define your Text Element
+    &__body {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: ($global-spacing-l / 2) $global-spacing / 2;
+        background-color: inherit;
+        text-align: left;
+
+        @include mq($mq-tab, min) {
+            padding: $global-spacing;
+        }
+    }
+
+}
