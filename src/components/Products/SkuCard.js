@@ -42,9 +42,7 @@ const SkuCard = ({ sku, stripePromise }) => {
           data-anim="fade-in-left"
           data-anim-delay="2"
         >
-          Limited edition letterpress print. Printed in movable wood & metal
-          type in an edition of 125. All profits donated to the NHS Covid-19
-          support Charity.
+          {sku.product.metadata.description}
         </p>
         <button
           className="c-product__btn  c-btn  c-btn--primary"

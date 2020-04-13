@@ -19,6 +19,11 @@ const Skus = () => {
                 attributes {
                   name
                 }
+                product {
+                  metadata {
+                    description
+                  }
+                }
               }
             }
           }
