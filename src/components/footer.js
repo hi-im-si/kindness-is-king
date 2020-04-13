@@ -9,7 +9,7 @@ const Footer = () => (
           className="o-row  o-row--m  u-border-bottom  u-pb-20"
           data-anim="fade-in-up"
         >
-          <h3>Created in Collaboration with:</h3>
+          <h3>Created in collaboration with:</h3>
         </header>
         <div className="c-img-grid" data-anim="fade-in-up-stagger">
           <a

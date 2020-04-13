@@ -14,7 +14,8 @@
     }
 
     &__price {
-
+        font-feature-settings: "lnum";
+        font-variant-numeric: lining-nums;
     }
 
     &__description {

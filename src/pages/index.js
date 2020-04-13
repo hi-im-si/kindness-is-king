@@ -72,9 +72,7 @@ const IndexPage = props => (
         Pinched Post is a graphic design studio with a real love for
         craftsmanship. This edition was designed and printed at Pinched Post’s
         studio in Leamington Spa, UK using their collection of letterpress
-        equipment.
-      </p>
-      <p className="t-font-delta">
+        equipment.{' '}
         <a
           className="u-text-link  u-text-bold"
           href="http://pinchedpost.co.uk"
