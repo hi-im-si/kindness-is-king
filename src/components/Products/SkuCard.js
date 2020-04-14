@@ -18,6 +18,9 @@ const SkuCard = ({ sku, stripePromise }) => {
       items: [{ sku, quantity }],
       successUrl: `${window.location.origin}/success/`,
       cancelUrl: `${window.location.origin}/`,
+      shippingAddressCollection: {
+        allowedCountries: ['GB'],
+      },
     })
 
     if (error) {
