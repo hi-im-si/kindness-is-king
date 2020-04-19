@@ -32,10 +32,10 @@ const SkuCard = ({ sku, stripePromise }) => {
     <div className="c-product">
       <div className="c-product__row">
         <p
-          className="c-product__price  t-font-beta  u-text-bolder"
+          className="c-product__price  t-font-gamma  u-text-bolder"
           data-anim="fade-in-up"
         >
-          {formatPrice(sku.price, sku.currency)}
+          SOLD OUT
         </p>
       </div>
 
@@ -47,14 +47,6 @@ const SkuCard = ({ sku, stripePromise }) => {
         >
           {sku.product.metadata.description}
         </p>
-        <button
-          className="c-product__btn  c-btn  c-btn--primary"
-          onClick={event => redirectToCheckout(event, sku.id)}
-          data-anim="fade-in-right"
-          data-anim-delay="2"
-        >
-          <span>Buy Now</span>
-        </button>
       </div>
     </div>
   )

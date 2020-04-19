@@ -20,7 +20,7 @@ const Hero = () => (
         hero: file(relativePath: { eq: "bg.png" }) {
           ...fluidImage
         }
-        poster: file(relativePath: { eq: "poster.png" }) {
+        poster: file(relativePath: { eq: "poster_sold_out.png" }) {
           ...fluidImage
         }
       }
